@@ -14,5 +14,3 @@ class ArticlesRepository{
         return $this->crawlerService->fetch();
     }
 }
-
-?>
