@@ -27,8 +27,8 @@ class CrawlerService
             if ($node->filter('.article-title')->count() > 0) {
                 $article->title = htmlentities(trim($node->filter('.article-title')->text()));
             }
-            if ($node->filter('.article-excerpt')->count() > 0) {
-                $article->excerpt = htmlentities(trim($node->filter('.article-excerpt')->text()));
+            if ($node->filter('.article-intro')->count() > 0) {
+                $article->excerpt = htmlentities(trim($node->filter('.article-intro')->text()));
             }
             if ($node->filter('.article-title a')->count() > 0) {
                 $article->url = $node->filter('.article-title a')->attr('href');
